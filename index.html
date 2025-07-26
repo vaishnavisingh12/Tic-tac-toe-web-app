@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    
+    <div class="container">
+        <header>
+            <h1><span class="neon-text">NEON</span> TIC-TAC-TOE</h1>
+            <div class="game-modes">
+                <button id="two-player" class="glow-btn">
+                    <i class="fas fa-users"></i> 2 Players
+                </button>
+                <button id="vs-ai" class="glow-btn">
+                    <i class="fas fa-robot"></i> VS AI
+                </button>
+                <button id="reset" class="glow-btn">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+            </div>
+        </header>
+
+        <div class="game-info">
+            <div id="player-turn" class="info-box">
+                <i class="fas fa-user"></i>
+                <span>Player X's Turn</span>
+            </div>
+            <div id="game-status" class="info-box pulse">
+                <i class="fas fa-info-circle"></i>
+                <span>Select game mode to start</span>
+            </div>
+        </div>
+
+        <div class="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="scoreboard">
+            <div class="score-box x-score">
+                <span>Player X</span>
+                <span id="x-wins">0</span>
+            </div>
+            <div class="score-box ties">
+                <span>Ties</span>
+                <span id="ties">0</span>
+            </div>
+            <div class="score-box o-score">
+                <span>Player O</span>
+                <span id="o-wins">0</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"></audio>
+    <audio id="win-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+    <audio id="draw-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-lose-2027.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
